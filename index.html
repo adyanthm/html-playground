@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web App Sandbox</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="code">
+      <div class="tabs">
+        <button class="tab active" data-tab='html'>HTML</button>
+        <button class="tab" data-tab='css'>CSS</button>
+        <button class="tab" data-tab='js'>JS</button>
+      </div>
+      <div class="editor">
+        <textarea id="html" class="editor-pane active" placeholder="html"></textarea>
+        <textarea id="css" class="editor-pane" placeholder="css"></textarea>
+        <textarea id="js" class="editor-pane" placeholder='js'></textarea>
+      </div>
+    </div>
+   <div class="divider" id="divider"></div>
+    <div class="preview">
+      <iframe id="output" sandbox='allow-scripts'></iframe>
+    </div>
+  </div>
+  <script src='script.js'></script>
+</body>
+</html>
