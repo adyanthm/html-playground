@@ -95,3 +95,11 @@ textarea::-webkit-scrollbar-thumb{
 .code, .preview {
     will-change: width;
 }
+
+.cm-editor {
+  height: 100%;
+  width:100%
+}
+.cm-editor:hover{
+  cursor:text;
+}

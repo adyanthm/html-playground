@@ -10,14 +10,14 @@
   <div class="container">
     <div class="code">
       <div class="tabs">
-        <button class="tab active" data-tab='html'>HTML</button>
-        <button class="tab" data-tab='css'>CSS</button>
-        <button class="tab" data-tab='js'>JS</button>
+        <button class="tab active" data-tab='html-editor'>HTML</button>
+        <button class="tab" data-tab='css-editor'>CSS</button>
+        <button class="tab" data-tab='js-editor'>JS</button>
       </div>
       <div class="editor">
-        <textarea id="html" class="editor-pane active" placeholder="html"></textarea>
-        <textarea id="css" class="editor-pane" placeholder="css"></textarea>
-        <textarea id="js" class="editor-pane" placeholder='js'></textarea>
+        <div id="html-editor" class="editor-pane active" placeholder="html"></div>
+        <div id="css-editor" class="editor-pane" placeholder="css"></div>
+        <div id="js-editor" class="editor-pane" placeholder='js'></div>
       </div>
     </div>
    <div class="divider" id="divider"></div>
@@ -25,6 +25,6 @@
       <iframe id="output" sandbox='allow-scripts'></iframe>
     </div>
   </div>
-  <script src='script.js'></script>
+  <script src='script.js' type='module'></script>
 </body>
 </html>
