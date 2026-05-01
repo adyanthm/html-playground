@@ -1,3 +1,13 @@
+:root{
+  --bg-main: #05060f;
+  --bg-tab-active: #101224;
+  --bg-tab-hover: #0e1021;
+  --text-main: #e5e5e5;
+  --border-subtle: #1a1d3a;
+  --scrollbar-thumb: #2a2e5a;
+  --accent:dodgerblue;
+}
+
 html, body{
   margin:0;
   height:100vh;
@@ -24,8 +34,8 @@ html, body{
 }
 textarea{
   flex:1;
-  background:#05060f;
-  color:#e5e5e5;
+  background:var(--bg-main);
+  color:var(--text-main);
   padding:10px;
   outline:none;
   border:none;
@@ -37,7 +47,7 @@ textarea::-webkit-scrollbar{
 
 }
 textarea::-webkit-scrollbar-thumb{
-  background:#2a2e5a;
+  background:var(--scrollbar-thumb);
   border-radius: 30px;
   cursor: pointer
 }
@@ -49,26 +59,26 @@ textarea::-webkit-scrollbar-thumb{
 }
 .tabs{
   display:flex;
-  background: #05060f;
+  background: var(--bg-main);
 }
 .tab{
   flex: 1;
   padding:10px;
-  background:#05060f;
-  color:#e5e5e5;
+  background:var(--bg-main);
+  color:var(--text-main);
   border:none;
   cursor:pointer;
   transition:0.3s;
-  border-bottom: 2px solid #1a1d3a;
+  border-bottom: 2px solid var(--border-subtle);
   font-weight:500;
   
 }
 .tab.active{
-  background:#101224;
-  border-bottom:3px solid dodgerblue;
+  background:var(--bg-tab-active);
+  border-bottom:3px solid var(--accent);
 }
 .tab:hover{
-  background:#0e1021;
+  background:var(--bg-tab-hover);
 }
 .editor{
   flex:1;
@@ -86,11 +96,11 @@ textarea::-webkit-scrollbar-thumb{
 .divider{
   width:3px;
   cursor:col-resize;
-  background: #1a1d3a;
+  background: var(--border-subtle);
   flex-shrink: 0
 }
 .divider:hover{
-  background:dodgerblue;
+  background:var(--accent);
 }
 .code, .preview {
     will-change: width;

@@ -6,6 +6,7 @@ import { lineNumbers } from "@codemirror/view";
 import { highlightActiveLine } from "@codemirror/view";
 import { keymap } from "@codemirror/view";
 import { defaultKeymap } from "@codemirror/commands";
+import { autocompletion } from "@codemirror/autocomplete";
 // langs
 import { html } from "@codemirror/lang-html";
 import { css } from "@codemirror/lang-css";
@@ -34,6 +35,7 @@ function createEditor(parentId, lang, initialValue){
         highlightActiveLine(),
         keymap.of(defaultKeymap),
         lang(),
+        autocompletion(),
         oneDark,
         syntaxHighlighting(defaultHighlightStyle),
         EditorView.updateListener.of((update) => {
