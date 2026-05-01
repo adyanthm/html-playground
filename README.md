@@ -4,6 +4,8 @@ This is a very simple web sandbox. You can use it to write HTML, CSS, and Javasc
 
 It is great for testing small ideas or learning how to code for the web.
 
+**[Try it here](https://playground.adyanth.in/)**
+
 ![Demo Image](demo.png)
 
 ## Features
