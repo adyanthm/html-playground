@@ -93,6 +93,5 @@ textarea::-webkit-scrollbar-thumb{
   background:dodgerblue;
 }
 .code, .preview {
-  flex: none;
     will-change: width;
 }

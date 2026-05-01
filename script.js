@@ -7,8 +7,13 @@ const panes = document.querySelectorAll('.editor-pane');
 const divider = document.getElementById('divider');
 const code = document.querySelector('.code');
 const preview = document.querySelector('.preview');
-
+const container = document.querySelector(".container");
 let isDragging=false;
+const dividerWidth = localStorage.getItem("divider");
+
+if(dividerWidth){
+  code.style.width = dividerWidth + "px"
+}
 
 divider.addEventListener('mousedown',()=>{
   isDragging=true;
@@ -19,10 +24,11 @@ divider.addEventListener('mousedown',()=>{
 document.addEventListener("mousemove", (e) => {
   if (!isDragging) return;
   const containerwidth = document.querySelector('.container').offsetWidth;
-  const containerRect = document.querySelector('.container').getBoundingClientRect();
+    const containerRect = document.querySelector('.container').getBoundingClientRect();
   const newCodeWidth = e.clientX - containerRect.left;
   if (newCodeWidth < 150 || newCodeWidth > containerwidth - 150) return;
   code.style.width = newCodeWidth + "px"
+  localStorage.setItem("divider", newCodeWidth)
 })
 
 document.addEventListener("mouseup", (e)=>{
@@ -36,7 +42,6 @@ divider.addEventListener("dblclick", ()=> {
 })
 
 function resetLayout(){
-  const container = document.querySelector(".container");
   const rect = container.getBoundingClientRect();
   const half = rect.width / 2;
   code.style.width = half + 'px';
